@@ -85,9 +85,9 @@ int main(){
     char botname[]="ai", username[101];
     int bdyear=2019, userage;
     greet(botname, bdyear);
-    //remindName(username);
-    //userage=guessAge();
-    //count();
+    remindName(username);
+    userage=guessAge();
+    count();
     question();
     printf("PROGRAM FINISHED");
 }
