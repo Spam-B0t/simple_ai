@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 #define abs(x) ((x)>=0) ? (x):-(x)
-#define clr(s) int i; for(i=0;i<100;i++) s[i]='\0';
+#define clr(s) for(i=0;i<100;i++) s[i]='\0';
 //#define print(x+y+z) print("%s", x); print("%s", y); print("%s", z);
 
 void greet(char botname[], int bdyear){
@@ -68,7 +68,7 @@ void question(){
     char questions[3][57]={"2+2=", "What is java", "What is the answer to life, the universe and everything"},
          answers[3][3][21]={{"4", "four", "-5 mod 9"}, {"coffee", "programming language"}, {"idk", "42"}},
          ans[100];
-    int r=2;//rand()%3;
+    int r=rand()%3, i;
     printf("Let's test your knowledge.\n");
     printf("%s?\n", questions[r]); clr(ans); gets(ans);
     while(checkans(ans, answers[r])!=0){
