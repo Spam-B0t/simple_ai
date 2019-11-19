@@ -11,7 +11,7 @@ void greet(char botname[], int bdyear){
 
 void remindName(char name[]){
     printf("Please, remind me your name.\n");
-    scanf("%s", name);
+    scanf("%100[^\n]", name);
     printf("What a great name you have, %s!\n", name);
 }
 
